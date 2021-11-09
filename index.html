@@ -1,135 +1,100 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Atividade 07 - Formulário</title>
-	<style type="text/css">
-		
-		header{
-			background-color: lightgrey;
-			height: 70px;
-			flex: 1;
-			order: -1;
-		}
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <title>Pesquisador</title>
+        <style>
+        header{
+            background-color: lightgrey;
+            height: 50px;
+            flex: 1;
+            order: -1;
 
-		h1{
-			font-family: sans-serif;
-			text-align: center;
-			line-height: 50px;
+        }
 
-		}
-		h2{
-			font-family: sans-serif;
-			text-align: center;
-			line-height: 50px;
+        h1{
+            font-family: sans-serif;
+            text-align: center;
+            line-height: 50px;
+            margin-top: auto;
+        }
 
-		}
-		
-		div.tres {
- 			width:20px;
- 			height:20px;
- 			border: 15px solid;
- 			border-color: #f00 #0f0 #00f #fc0; 
- 			order: 0;
- 			position: relative;
- 			margin-left: auto;
-    		margin-right: auto;
- 		}
- 		p.logoN {
- 			font-size: 10px;
- 		}
- 		footer {
-			background-color: black;
-			flex: 2;
-			order: 1;
-			color: white;
-			text-align: center;
-			margin-top: 300px;
-			border: 5px solid;
-		}
-		section {
-			flex: 8;
-			order: 0;
-		}
-
-		
-		input[type="number"], 
-        input[type="text"], 
-        select
+        input[type="number"], 
+        input[type="text"]
         {
             width: 200px;
-            background-color: grey;
-            color: white;
+            background-color: white;
+            color: black;
             font-size: 20px;
         }
         
         input[type="number"]::placeholder,
         input[type="text"]::placeholder {
-            color: white;
+            color: black;
         }
         
         input[type="submit"] {
-            background-color: black;
-            color: white;
+            background-color: grey;
+            color: black;
             border-radius: 10px;
             font-size: 20px;
         }
-
+        div.tres {
+            width:20px;
+            height:20px;
+            border: 15px solid;
+            border-color: #f00 #0f0 #00f #fc0; 
+            order: 0;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p.logoN {
+            font-size: 10px;
+        }
+        footer {
+            background-color: black;
+            flex: 2;
+            order: 1;
+            color: white;
+            text-align: center;
+            margin-top: 300px;
+            border: 5px solid;
+        }
         div.form {
-    		display: block;
-    		margin-top: 100px;
-    		text-align: center;
-		}
+            display: block;
+            margin-top: 100px;
+            text-align: center;
+        }
+        section {
+            flex: 8;
+            order: 0;
+        }
 
-	</style>
-	<script>
-		function clicked(e)
-		{
-		    return confirm('Enviado!!');
-		}
-	</script>
-</head>
-<body>
-	<header>
-		<h1>Bem vindo ao formulário</h1>
-		
-	</header>
-	<section>	
-	<div class="form">
-	  	<h2>Seja Bem vindo, por favor responda:</h2>
-	  	<form>
-            <b>
-            <p align="center"> Digite os seguintes dados:</p>
-            <input type="text" name="nome" placeholder="Digite seu nome" autocomplete="off">
-            <br>
-            <input type="text" name="email" placeholder="Digite seu e-mail" autocomplete="off">
-            <br>
-            <p align="center">Digite uma nota para o </br>
-            tamanho de sua vontade de "CODAR"</p>
-            <input type="number" name="nota" step="0.01" placeholder="Digite uma nota (1 a 10) para o Google" min="0" max="10" autocomplete="off">
-            <br>
-            <p align="center">Digite o seu genero</p>
-            <select name="sexo">
-                <option disabled selected>Selecione</option>
-                <option value="F">Feminino</option>
-                <option value="M">Masculino</option>
-                <option value="NB">Não Binário</option>
-                <option value="NB">Não quero responder</option>
-            </select>
-            <br>
-        	</b>
-            <input type="submit" value="Enviar" onclick="clicked(event)">
-        </form>	
-    </div>
+        </style>
+    </head>
 
-	</section>
-	<footer>
-			<p>Formuários - Google</p>
-			<div class="tres"></div>
-			<p class="logoN">Google.apps</p>
-			<p>Google.inc</p>
-			<p>Suporte: google.help@suporte.com</p>
-	</footer>
-</body>
+    <body>
+        <header>
+        <h1>Bem vindo ao pesquisador</h1>
+        
+        </header>
+        <section>
+        <div class="form">
+        <h2>Faça a sua Pesquisa!</h2>
+        <form action="https://www.google.com.br/search">
+            <input type="text" name="q" placeholder="Digite aqui" autocomplete="off">
+            <br>
+            <input type="submit" value="BUSCAR!">
+        </form>
+        </div>
+        </section>
+        <footer>
+            <p>Google</p>
+            <div class="tres"></div>
+            <p class="logoN">Google.apps</p>
+            <p>Google.inc</p>
+            <p>Suporte: google.help@suporte.com</p>
+        </footer>
+    </body>
 </html>
